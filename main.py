@@ -1,17 +1,19 @@
 import constants, place, control
 
 
+
+
 def main():  # совмещение функций
     counter = 0  # отвечает за нумерацию хода
     while True:
         place.create_board()
         if counter % 2 == 0:
-            take_input('X')
+            control.take_input('X')
         else:
-            take_input('O')
+            control.take_input('O')
         if counter > 3:  # Сделано  3 хода одним игороком.
             # проверка выигрышных комбинаций
-            winner = check_win()
+            winner = control.check_win()
             if winner:
                 place.create_board()
                 print(winner, 'выиграл')
@@ -22,5 +24,5 @@ def main():  # совмещение функций
             print('ничья')
             break
 
-
-main()
+if __name__ == "__main__":
+    main()
