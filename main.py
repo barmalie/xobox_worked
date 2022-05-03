@@ -1,7 +1,4 @@
-import constants, place, control
-
-
-
+import place, control
 
 def main():  # совмещение функций
     counter = 0  # отвечает за нумерацию хода
